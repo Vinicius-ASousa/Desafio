@@ -1,0 +1,42 @@
+services:
+  app:
+    build: 
+      context: ./.docker/dev/api
+      dockerfile: Dockerfile
+    container_name: app
+    tty: true
+    restart: always
+    volumes:
+      - ./:/var/www
+    networks:
+      - backend
+  
+  nginx:
+    build: 
+      context: ./.docker/dev/nginx
+      dockerfile: Dockerfile
+    container_name: nginx
+    volumes:
+      - ./:/var/www
+    ports:
+      - "8000:80"
+    networks:
+      - backend
+  
+  # db:
+  #   container_name: db
+  #   image: mysql:9.3
+  #   tty: true
+  #   restart: always
+  #   ports:
+  #     - "3306:3306"
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=1234
+  #   volumes:
+  #     - ./.docker/dev/dbdata:/var/lib/mysql
+  #   networks:
+  #     - backend
+
+networks:
+  backend:
+    driver: bridge
