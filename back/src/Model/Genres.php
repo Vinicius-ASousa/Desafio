@@ -6,25 +6,15 @@ use App\Model\Database;
 
 class Genres extends Database
 {
-    protected string $table = __DIR__ . DIRECTORY_SEPARATOR. "/../../../movies.json";
+    //protected string $table = __DIR__ . DIRECTORY_SEPARATOR. "/../../../movies.json";
 
-    public function listGenres(): array
+    public function all(): array
     {
+        $conn = $this->getConnection();
 
-        $data = $this->getConnection();
+        $sth = $conn->prepare('SELECT name FROM genres');
+        $sth->execute();
 
-        $result = [];
-
-        foreach($data as $genre){
-            for($i=0;$i<count($genre["genres"]);$i++){
-                $hasInArray = in_array($genre["genres"][$i], $result) == true;
-                if(!$hasInArray){
-                    $result[] = $genre["genres"][$i];
-                }
-            }
-        }
-
-        return $result;
-
+        return $sth->fetchAll(\PDO::FETCH_COLUMN);
     }
 }

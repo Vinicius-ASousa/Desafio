@@ -1,0 +1,23 @@
+{
+    "name": "vinicius/back",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "files": ["helpers/helper.php"],
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vinicius"
+        }
+    ],
+    "scripts": {
+        "phpcs": "vendor/bin/phpcs ./src --standard=PSR12",
+        "phpcbf": "vendor/bin/phpcbf ./src --standard=PSR12"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.0"
+    }
+}

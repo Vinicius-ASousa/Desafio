@@ -20,7 +20,7 @@ class MovieController
     public function listar()
     {
         $nome = $_GET["nome"];
-        $genres = $_GET["generos"];
+        $genres = $_GET["generos"] ?? [];
         $data = [
             'name' => $nome,
             'genres' => $genres

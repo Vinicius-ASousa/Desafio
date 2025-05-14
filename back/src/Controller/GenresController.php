@@ -6,15 +6,15 @@ use App\Model\Genres;
 
 class GenresController
 {
-    private Genres $model;
+    private Genres $genresModel;
 
     public function __construct()
     {
-        $this->model = new Genres();
+        $this->genresModel = new Genres();
     }
 
-    public function list(){
-        return $this->model->listGenres();
+    public function all(){
+        return $this->genresModel->all();
     }
 
 }
