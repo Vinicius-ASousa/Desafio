@@ -17,7 +17,7 @@ O intuito do projeto é criar uma API REST, para a manipulação dos dados, e de
 * [Axios](https://axios-http.com/ptbr/docs/intro) - Cliente HTTP
 * [MySql](https://dev.mysql.com/doc/) - Banco de dados
 * [Composer](https://getcomposer.org/) - Gerenciador de depedências
-* [Docker](https://docs.docker.com/) - Genrênciador da aplicação em containers
+* [Docker](https://docs.docker.com/) - Gerenciador da aplicação em containers
 * [Vite](https://vite.dev/guide/) - Servidor
 
 ## ⚒️ Autores
