@@ -1,6 +1,6 @@
 # Construção de uma API de exibição de filmes
 
-O intuito do projeto é criar uma API REST para a manipulação dos dados e de um catálogo de filmes
+O intuito do projeto é criar uma API REST, para a manipulação dos dados, e de um catálogo de filmes
 
 ## 📦 Pré requisitos
 
