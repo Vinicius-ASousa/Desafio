@@ -15,9 +15,10 @@ O intuito do projeto é criar uma API REST, para a manipulação dos dados, e de
 * [PHP](https://www.php.net/docs.php) - Linguagem usada no backend
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Linguagem usado no frontend
 * [Axios](https://axios-http.com/ptbr/docs/intro) - Cliente HTTP
-* [Vite](https://vite.dev/guide/) - Servidor
+* [MySql](https://dev.mysql.com/doc/) - Banco de dados
 * [Composer](https://getcomposer.org/) - Gerenciador de depedências
 * [Docker](https://docs.docker.com/) - Genrênciador da aplicação em containers
+* [Vite](https://vite.dev/guide/) - Servidor
 
 ## ⚒️ Autores
 * **Vinicius Alves** - *Documentação e aprendizado* - [ViniciusAlves](https://github.com/Vinicius-ASousa)
