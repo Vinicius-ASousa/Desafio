@@ -23,19 +23,22 @@ services:
     networks:
       - backend
   
-  # db:
-  #   container_name: db
-  #   image: mysql:9.3
-  #   tty: true
-  #   restart: always
-  #   ports:
-  #     - "3306:3306"
-  #   environment:
-  #     - MYSQL_ROOT_PASSWORD=1234
-  #   volumes:
-  #     - ./.docker/dev/dbdata:/var/lib/mysql
-  #   networks:
-  #     - backend
+  db:
+    container_name: db
+    build: 
+      context: ./.docker/dev/db
+      dockerfile: Dockerfile
+    tty: true
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+    volumes:
+      - ./.docker/dev/dbdata:/var/lib/mysql
+      - ./.docker/dev/db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - backend
 
 networks:
   backend:

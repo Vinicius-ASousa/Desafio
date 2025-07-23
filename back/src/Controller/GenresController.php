@@ -6,6 +6,7 @@ use App\Model\Genres;
 
 class GenresController
 {
+    
     private Genres $genresModel;
 
     public function __construct()
@@ -14,6 +15,7 @@ class GenresController
     }
 
     public function all(){
+    
         return $this->genresModel->all();
     }
 

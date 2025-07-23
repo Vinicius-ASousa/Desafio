@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Controller\MovieController;
 use App\Controller\GenresController;
-
+header("Access-Control-Allow-Origin: *");
 class Controller
 {
     protected string $action;

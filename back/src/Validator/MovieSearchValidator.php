@@ -9,12 +9,7 @@ class MovieSearchValidator extends Validator
     public function validate(): bool
     {
         $data = $this->getData();
-        if ($data['name'] == "") {
-            $this->error['name'] = [
-                'required' => "O campo nome é obrigatório"
-            ];
-        }
-
+        
         if (mb_strlen($data['name']) > 250) {
             if (!isset($this->error['name'])) {
                 $this->error['name'] = [];

@@ -19,7 +19,7 @@ class MovieController
 
     public function listar()
     {
-        $nome = $_GET["nome"];
+        $nome = $_GET["nome"] ?? '';
         $genres = $_GET["generos"] ?? [];
         $data = [
             'name' => $nome,
@@ -32,6 +32,18 @@ class MovieController
             return $validator->getErrors();
         }
 
-        return $this->model->list($data);
+        return $this->model->list2($data);
+    }
+
+    public function insert(){
+        $data = [
+            'name' => $_GET["name"],
+            'description' => $_GET["description"],
+            'image' => $_GET["image"],
+            'year_publication' => $_GET["year_publication"],
+            'featured' => $_GET["featured"],
+            'genres' => $_GET["generos"]
+        ];
+        return $this->model->insert($data);
     }
 }
