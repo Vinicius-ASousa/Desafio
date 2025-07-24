@@ -17,7 +17,7 @@ O intuito do projeto é criar uma API REST, para a manipulação dos dados, e de
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Linguagem usado no frontend
 * [Axios](https://axios-http.com/ptbr/docs/intro) - Cliente HTTP
 * [Vite](https://vite.dev/guide/) - Ferramenta de otimização de desenvolvimento
-* [nginx](https://nginx.org/en/docs/) - Servidor
+* [Nginx](https://nginx.org/en/docs/) - Servidor
 * [Composer](https://getcomposer.org/) - Gerenciador de depedências
 * [Docker](https://docs.docker.com/) - Genrênciador da aplicação em containers
 
